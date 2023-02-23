@@ -1,0 +1,149 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <title>My First Web Page</title>
+      <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+      <div class="header">
+        <img class="Revou-Logo" src="assets/Images/Logo.png" alt="Revou-Logo" />
+        <nav>
+          <ul class="header-home">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#">Portofolio</a></li>
+            <li><a href="#">Message Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="container">
+        <div class="container-text">
+          <h1 class="home">
+            Hi, I'm <span class="name">Welcome to My Website</span>
+          </h1>
+
+          <script>
+            var name = prompt("Masukkan Nama Anda");
+            document.getElementById("nama").innerHTML = name;
+          </script>
+        </div>
+      </section>
+
+      <section class="content">
+        <img class="content-image" src="assets/Images/Revou.jpg" alt="content-1" />
+      </section>
+
+    <section>
+      <h1 class="content-profile"> Our Headquarter</h1>
+      <div class="content-loc">
+        <div class="grploc">
+          <img class="content-loc-image" src="assets/Images/monas.jpg" alt="content-1" />
+          <h2 class="content-loc-title">Jakarta</h2>
+        </div>
+        <div class="grploc">
+          <img class="content-loc-image" src="assets/Images/bandung.jpg" alt="content-1" />
+          <h2 class="content-loc-title">Bandung</h2>
+      </div>
+      <div class="grploc">
+        <img class="content-loc-image" src="assets/Images/surabaya.jpg" alt="content-1" />
+        <h2 class="content-loc-title">Surabaya</h2>
+      </section>
+      
+      <section>
+        <h1 class="Message">
+          Message Us
+        </h1>
+        <section class="form-Massage">
+          <form class="form-int" name="form-Msg" onsubmit="return validateForm()">
+              <div class="grp-int">
+                  <p>Nama : </p>
+                  <div class="textbox">
+                    <input type="text" name="int-nama" placeholder="Nama" />
+                  </div>
+              </div>
+              <div class="grp-int">
+                <p>Tanggal Lahir: </p>
+                <div class="textbox">
+                  <input type="date" name="int-tgl" placeholder="Tanggal Lahir" />
+                </div> 
+              </div>
+              <div class="grp-int">
+                <p>Jenis Kelamin: </p>
+                <div class="textbox">
+                  <input type="radio" name="int-jk" value="Laki-Laki" /> Laki-Laki
+                  <input type="radio" name="int-jk" value="Perempuan" /> Perempuan
+                </div>
+              </div>
+              <div class="grp-int">
+                <p>Pesan: </p>
+                <div class="textbox">
+                  <textarea name="int-pesan" cols="25" rows="25" placeholder="Pesan"></textarea>
+                </div>
+              </div>
+              <div class="grp-int">
+                <input type="submit" id="submit value="Kirim" />
+              </div>
+          </form>
+
+              <script>
+                function validateForm(){
+                  var nama = document.forms["form-Msg"]["int-nama"].value;
+                  var tgl = document.forms["form-Msg"]["int-tgl"].value;
+                  var jk = document.forms["form-Msg"]["int-jk"].value;
+                  var pesan = document.forms["form-Msg"]["int-pesan"].value;
+
+                  if (nama == "" || tgl == "" || jk == "" || pesan == ""){
+                    alert("Semua Form Harus Diisi");
+                    return false;
+                  }
+                  else{
+                    alert("Pesan Berhasil Terkirim");
+                    return true;
+                  }
+
+                  document.getElementById("submit-nama").innerHTML = nama;
+                  document.getElementById("submit-tgl").innerHTML = tgl;
+                  document.getElementById("submit-jk").innerHTML = jk;
+                  document.getElementById("submit-pesan").innerHTML = pesan;
+                  return false;
+                }
+              </script>
+
+              <div class="output">
+                <div class="output-grp">
+                  <p class="output-title">
+                    Nama : <span id="submit-nama"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="output">
+                <div class="output-grp">
+                  <p class="output-title">
+                    Tanggal Lahir : <span id="submit-tgl"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="output">
+                <div class="output-grp">
+                  <p class="output-title">
+                    Jenis Kelamin : <span id="submit-jk"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="output">
+                <div class="output-grp">
+                  <p class="output-title">
+                    Pesan : <span id="submit-pesan"></span>
+                  </p>
+                </div>
+              </div> 
+        </section>
+      </section>
+
+      <footer>
+        created by <a href="https://www.instagram.com/revou.id/">Revou.id</a>
+      </footer>
+    </body>
+  </html>
+</DOCTYPE>
